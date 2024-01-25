@@ -1,13 +1,13 @@
 <navbar class="navbar">
 <div class="brand">
-    <a href="/">
+    <a href="{{ '/' | relative_url }}">
         <img alt="klub fit++ logo" src="{{ 'assets/images/logo.svg' | relative_url }}"/>
     </a>
 </div>
 <a id="nav-toggle" href="#" aria="off" class="nav-toggle not-md" onclick="toggleNav()">Menu Toggle</a>
 <div id="nav-menu" class="nav-links md">
     {% for navItem in site.data.navbar %}
-        <a class="nav-link black" href={{navItem.link}}>
+        <a class="nav-link black" href={{ navItem.link | relative_url }}>
             {{navItem.text}}
         </a>
     {% endfor %}

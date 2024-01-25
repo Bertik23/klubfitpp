@@ -45,11 +45,11 @@ layout: home
         <a class="refs__links__link" href="mailto:fitpp@su.cvut.cz"><i class="refs__links__link__logo ion ion-ios-mail"></i> fitpp@su.cvut.cz</a>
       </article>
     </section>
-    <div class="gridlist">
+    <section class="gridlist">
       {% for post in site.posts %}
     {% include event_tile.html event=post more_text=include.more_text %}
     {% endfor %}
-    </div>
+    </section>
     <section class="refs">
       <h2 class="section__title">Další zajímavé skupiny</h2>
       <article class="refs__links">
