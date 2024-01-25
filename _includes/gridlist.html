@@ -1,0 +1,5 @@
+<div class="gridlist">
+{% for item in include.list %}
+    {% include event_tile.html event=item more_text=include.more_text %}
+{% endfor %}
+</div>

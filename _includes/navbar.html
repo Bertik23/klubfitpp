@@ -1,0 +1,15 @@
+<navbar class="navbar">
+<div class="brand">
+    <a href="/">
+        <img alt="klub fit++ logo" src="/images/logo.svg"/>
+    </a>
+</div>
+<a id="nav-toggle" href="#" aria="off" class="nav-toggle not-md" onclick="toggleNav()">Menu Toggle</a>
+<div id="nav-menu" class="nav-links md">
+    {% for navItem in site.data.navbar %}
+        <a class="nav-link black" href={{navItem.link}}>
+            {{navItem.text}}
+        </a>
+    {% endfor %}
+</div>
+</navbar>

@@ -1,0 +1,96 @@
+@import "themes";
+
+.gridlist{
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: grid;
+    justify-content: center;
+    gap: 1rem 1rem;
+    grid-template-columns: repeat(auto-fill, 22.5rem);
+}
+
+.event-scroll-head{
+    display: grid;
+
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.scroll-control{
+    justify-self: end;
+}
+
+.event-small{
+    display: block;
+    max-width: 18.75rem;
+    // grid-template-columns: auto auto;
+    margin-bottom: .3rem;
+}
+
+.event-small:hover{
+    box-shadow: .1rem .1rem rgba($color: #000000, $alpha: .1);
+}
+
+.owl-dots{
+    display: none;
+}
+
+.event-small-image{
+    display: block;
+    max-height: 13.4375rem;
+    //max-width: 20.3125rem;
+    max-width: 100%;
+    border-radius: .3125rem;
+}
+
+.event-small-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+}
+
+.event-scroll{
+    width: 100%;
+    margin-bottom: 5rem;
+    //overflow: hidden;
+}
+
+.event-scroll-events{
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    // grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
+    max-width: 100%;//calc(100vw - 11rem);
+    // //overflow: auto;
+    // white-space: nowrap;
+    // background-color: #AAA;
+}
+
+.event-scroll-control-button{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.event-scroll-control-button:hover{
+    cursor: pointer;
+}
+
+.event-annotation{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    margin-bottom: 1.1875rem;
+}
+
+.event-read-more{
+    margin-top: 1.1875rem;
+    @include themed(){
+        color: t($readmore);
+    }
+}
+
+.event-scroll-more-button{
+    position: relative;
+}

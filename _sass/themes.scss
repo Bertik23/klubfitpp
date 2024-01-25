@@ -1,0 +1,59 @@
+@import "colors";
+
+$navbar-bg: "navbar-bg";
+$navbutton-bg: "navbutton-bg";
+$navbutton-txt: "navbutton-txt";
+$button-bg: "button-bg";
+$button-txt: "button-txt";
+$navlink-txt: "navlink-txt";
+$readmore: "readmore";
+$dark-bg: "dark-bg";
+$darkbox-bg: "darkbox-bg";
+$footer-bg: "footer-bg";
+
+$theme-map: null;
+
+$themes: (
+  default: (
+    navbar-bg: $navbar-light,
+    navbutton-bg: $navbutton-light,
+    navbutton-txt: $navbutton-text-light,
+    navlink-txt: $navlink-text-light,
+    readmore: $readmore-light,
+    footer-bg: $footer-light,
+    dark-bg: $dark-bg-light,
+    button-bg: $button-bg-light,
+    button-txt: $button-txt-light,
+    darkbox-bg: $darkbox-bg-light
+  ),
+  dark: (
+    navbar-bg: $navbar-dark,
+    navbutton-bg: $navbutton-dark,
+    navbutton-txt: $navbutton-text-dark,
+    navlink-txt: $navlink-text-dark,
+    readmore: $readmore-dark,
+    footer-bg: $footer-dark,
+    dark-bg: $dark-bg-dark,
+    button-bg: $button-bg-dark,
+    button-txt: $button-txt-dark,
+    darkbox-bg: $darkbox-bg-dark
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
