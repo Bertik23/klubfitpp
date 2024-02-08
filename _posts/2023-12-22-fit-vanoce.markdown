@@ -3,7 +3,7 @@ layout: post
 image: "https://cdn.discordapp.com/attachments/839957119485739064/1200075528187695227/fitvanoce23-21.jpg?ex=65c4dc6e&is=65b2676e&hm=3477340f2b367064b27d61b04c26c1aa5b36adf3b0087c2e3405e03c6ca84351&"
 title:  "FIT Vánoce"
 date:   2023-12-22 13:35:34 +0100
-perex: "FIT Vánoce byly super koukni se na fotky z nich."
+excerpt: "FIT Vánoce byly super koukni se na fotky z nich."
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

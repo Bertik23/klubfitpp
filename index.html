@@ -45,8 +45,9 @@ layout: home
         <a class="refs__links__link" href="mailto:fitpp@su.cvut.cz"><i class="refs__links__link__logo ion ion-ios-mail"></i> fitpp@su.cvut.cz</a>
       </article>
     </section>
-    <section class="gridlist">
-      {% for post in site.posts %}
+    <section class="gridlist" style="width: 90%; justify-self: center">
+      {% assign first_posts = site.posts | slice: 0, 5 %}
+      {% for post in first_posts %}
     {% include event_tile.html event=post more_text=include.more_text %}
     {% endfor %}
     </section>

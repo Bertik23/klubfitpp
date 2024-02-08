@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<article class="post">
+<article class="post" style="display: grid">
   <h1>{{ page.title }}</h1>
+  <img class="post__image" src={{ page.image }}>
   <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
 
   <!-- Display the excerpt in bold -->
